@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAopSpike.Web", "UnityAopSpike.Web\UnityAopSpike.Web.csproj", "{CE4D688F-37B7-463A-B8E8-A7F069143ADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAopSpike.Web.UnitTests", "UnityAopSpike.Web.UnitTests\UnityAopSpike.Web.UnitTests.csproj", "{99A03B81-C8C6-4755-BDF1-C3677C731081}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3FFF0BA1-4161-4D11-BAE8-BFBF78400117}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE4D688F-37B7-463A-B8E8-A7F069143ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE4D688F-37B7-463A-B8E8-A7F069143ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE4D688F-37B7-463A-B8E8-A7F069143ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE4D688F-37B7-463A-B8E8-A7F069143ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A03B81-C8C6-4755-BDF1-C3677C731081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A03B81-C8C6-4755-BDF1-C3677C731081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A03B81-C8C6-4755-BDF1-C3677C731081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A03B81-C8C6-4755-BDF1-C3677C731081}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
