@@ -28,6 +28,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAopSpike.AcceptanceTes
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UnityAopSpike.SqlServerDatabase", "UnityAopSpike.SqlServerDatabase\UnityAopSpike.SqlServerDatabase.sqlproj", "{246047B0-B405-43FE-ADD1-ABC2F0FB876F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAopSpike.Core", "UnityAopSpike.Core\UnityAopSpike.Core.csproj", "{4E0F9ECD-7CF8-4160-A96E-57162E16C75A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAopSpike.Core.UnitTests", "UnityAopSpike.Core.UnitTests\UnityAopSpike.Core.UnitTests.csproj", "{3AE55A5E-0E30-4DFC-86E9-48AA801D6386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +76,14 @@ Global
 		{246047B0-B405-43FE-ADD1-ABC2F0FB876F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{246047B0-B405-43FE-ADD1-ABC2F0FB876F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{246047B0-B405-43FE-ADD1-ABC2F0FB876F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4E0F9ECD-7CF8-4160-A96E-57162E16C75A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E0F9ECD-7CF8-4160-A96E-57162E16C75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E0F9ECD-7CF8-4160-A96E-57162E16C75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E0F9ECD-7CF8-4160-A96E-57162E16C75A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE55A5E-0E30-4DFC-86E9-48AA801D6386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE55A5E-0E30-4DFC-86E9-48AA801D6386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE55A5E-0E30-4DFC-86E9-48AA801D6386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE55A5E-0E30-4DFC-86E9-48AA801D6386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

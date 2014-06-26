@@ -64,4 +64,7 @@
   <ItemGroup>
     <RefactorLog Include="UnityAopSpike.SqlServerDatabase.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="UnityAopSpike.SqlServerDatabase-LOCAL_DEV.publish.xml" />
+  </ItemGroup>
 </Project>
