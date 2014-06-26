@@ -7,4 +7,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="order_timestamp" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="94413dc9-c185-45e1-9c07-f99d4790f148" ChangeDateTime="06/26/2014 21:07:17">
+    <Property Name="ElementName" Value="[dbo].[FK_OrderItems_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[OrderItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_OrderItems_ToOrders]" />
+  </Operation>
 </Operations>

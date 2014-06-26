@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Orders.sql" />
+    <Build Include="OrderItems.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="UnityAopSpike.SqlServerDatabase.refactorlog" />
