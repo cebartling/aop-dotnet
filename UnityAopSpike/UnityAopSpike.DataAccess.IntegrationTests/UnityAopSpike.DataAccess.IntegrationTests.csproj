@@ -60,7 +60,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Contexts\CreateOrderDbContextIntegrationTest.cs" />
+    <Compile Include="Contexts\EntityDatabaseContextIntegrationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

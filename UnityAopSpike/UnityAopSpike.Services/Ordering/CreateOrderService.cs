@@ -6,19 +6,19 @@ namespace UnityAopSpike.Services.Ordering
 {
     public class CreateOrderService
     {
-        public ICreateOrderDbContext _createOrderDbContext;
+        public IEntityDatabaseContext EntityDatabaseContext;
 
-        public CreateOrderService(ICreateOrderDbContext createOrderDbContext)
+        public CreateOrderService(IEntityDatabaseContext entityDatabaseContext)
         {
-            _createOrderDbContext = createOrderDbContext;
+            EntityDatabaseContext = entityDatabaseContext;
         }
 
         public void Execute()
         {
             var order = new Order {OrderNumber = GenerateOrderNumber(), 
-                OrderTimestamp = new DateTime()};
-            _createOrderDbContext.Orders.Add(order);
-            _createOrderDbContext.SaveChanges();
+                OrderDateTime = new DateTime()};
+            EntityDatabaseContext.Orders.Add(order);
+            EntityDatabaseContext.SaveChanges();
         }
 
         private string GenerateOrderNumber()

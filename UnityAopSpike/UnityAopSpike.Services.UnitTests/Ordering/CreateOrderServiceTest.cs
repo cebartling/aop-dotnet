@@ -11,13 +11,13 @@ namespace UnityAopSpike.Services.UnitTests.Ordering
     public class CreateOrderServiceTest
     {
         private Mock<DbSet<Order>> _mockSet;
-        private Mock<ICreateOrderDbContext> _mockContext;
+        private Mock<IEntityDatabaseContext> _mockContext;
 
         [TestInitialize]
         public void DoBefore()
         {
             _mockSet = new Mock<DbSet<Order>>();
-            _mockContext = new Mock<ICreateOrderDbContext>();
+            _mockContext = new Mock<IEntityDatabaseContext>();
         }
 
         [TestMethod]

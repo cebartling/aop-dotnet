@@ -3,7 +3,7 @@ using UnityAopSpike.Core.Domain;
 
 namespace UnityAopSpike.DataAccess.Contexts
 {
-    public interface ICreateOrderDbContext
+    public interface IEntityDatabaseContext
     {
 
         DbSet<Order> Orders { get; set; }

@@ -48,8 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexts\CreateOrderDbContext.cs" />
-    <Compile Include="Contexts\ICreateOrderDbContext.cs" />
+    <Compile Include="Contexts\EntityDatabaseContext.cs" />
+    <Compile Include="Contexts\IEntityDatabaseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
