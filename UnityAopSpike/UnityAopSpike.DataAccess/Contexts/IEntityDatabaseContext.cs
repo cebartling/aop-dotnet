@@ -7,6 +7,7 @@ namespace UnityAopSpike.DataAccess.Contexts
     {
 
         DbSet<Order> Orders { get; set; }
+        DbSet<Product> Products { get; set; }
 
         int SaveChanges();
     }
