@@ -1,10 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 using UnityAopSpike.Core.Domain;
 using UnityAopSpike.DataAccess.Contexts;
 
 namespace UnityAopSpike.Services
 {
-    public class ProductService
+    public class ProductService : IProductService
     {
         private readonly IEntityDatabaseContext _entityDatabaseContext;
 
@@ -13,7 +13,7 @@ namespace UnityAopSpike.Services
             _entityDatabaseContext = entityDatabaseContext;
         }
 
-        public IQueryable<Product> GetAllProducts()
+        public IEnumerable<Product> GetAllProducts()
         {
             return _entityDatabaseContext.Products;
         }

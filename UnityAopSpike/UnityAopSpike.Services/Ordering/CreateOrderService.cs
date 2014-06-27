@@ -15,8 +15,11 @@ namespace UnityAopSpike.Services.Ordering
 
         public void Execute()
         {
-            var order = new Order {OrderNumber = GenerateOrderNumber(), 
-                OrderDateTime = new DateTime()};
+            var order = new Order
+            {
+                OrderNumber = GenerateOrderNumber(),
+                OrderDateTime = new DateTime()
+            };
             EntityDatabaseContext.Orders.Add(order);
             EntityDatabaseContext.SaveChanges();
         }

@@ -168,6 +168,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -232,7 +233,20 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UnityAopSpike.Core\UnityAopSpike.Core.csproj">
+      <Project>{4e0f9ecd-7cf8-4160-a96e-57162e16c75a}</Project>
+      <Name>UnityAopSpike.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityAopSpike.DataAccess\UnityAopSpike.DataAccess.csproj">
+      <Project>{595639ea-4200-4a54-a122-59c7b63ff275}</Project>
+      <Name>UnityAopSpike.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityAopSpike.Services\UnityAopSpike.Services.csproj">
+      <Project>{3f2a9433-152b-4903-9466-67c1ac7ed9a9}</Project>
+      <Name>UnityAopSpike.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

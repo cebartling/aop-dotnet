@@ -10,8 +10,8 @@ namespace UnityAopSpike.Services.UnitTests.Ordering
     [TestClass]
     public class CreateOrderServiceTest
     {
-        private Mock<DbSet<Order>> _mockSet;
         private Mock<IEntityDatabaseContext> _mockContext;
+        private Mock<DbSet<Order>> _mockSet;
 
         [TestInitialize]
         public void DoBefore()
@@ -39,7 +39,7 @@ namespace UnityAopSpike.Services.UnitTests.Ordering
 
             service.Execute();
 
-            _mockContext.Verify(m => m.SaveChanges(), Times.Once()); 
+            _mockContext.Verify(m => m.SaveChanges(), Times.Once());
         }
     }
 }

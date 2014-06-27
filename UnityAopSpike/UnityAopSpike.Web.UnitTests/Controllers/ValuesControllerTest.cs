@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Web.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UnityAopSpike.Web;
 using UnityAopSpike.Web.Controllers;
 
 namespace UnityAopSpike.Web.UnitTests.Controllers
@@ -17,7 +12,7 @@ namespace UnityAopSpike.Web.UnitTests.Controllers
         public void Get()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             IEnumerable<string> result = controller.Get();
@@ -33,7 +28,7 @@ namespace UnityAopSpike.Web.UnitTests.Controllers
         public void GetById()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             string result = controller.Get(5);
@@ -46,7 +41,7 @@ namespace UnityAopSpike.Web.UnitTests.Controllers
         public void Post()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             controller.Post("value");
@@ -58,7 +53,7 @@ namespace UnityAopSpike.Web.UnitTests.Controllers
         public void Put()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             controller.Put(5, "value");
@@ -70,7 +65,7 @@ namespace UnityAopSpike.Web.UnitTests.Controllers
         public void Delete()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            var controller = new ValuesController();
 
             // Act
             controller.Delete(5);

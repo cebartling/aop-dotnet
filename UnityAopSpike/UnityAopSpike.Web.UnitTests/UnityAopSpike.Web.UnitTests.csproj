@@ -37,6 +37,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -93,6 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ProductsControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
@@ -104,6 +108,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UnityAopSpike.Core\UnityAopSpike.Core.csproj">
+      <Project>{4e0f9ecd-7cf8-4160-a96e-57162e16c75a}</Project>
+      <Name>UnityAopSpike.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityAopSpike.Services\UnityAopSpike.Services.csproj">
+      <Project>{3f2a9433-152b-4903-9466-67c1ac7ed9a9}</Project>
+      <Name>UnityAopSpike.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UnityAopSpike.Web\UnityAopSpike.Web.csproj">
       <Project>{CE4D688F-37B7-463A-B8E8-A7F069143ADE}</Project>
       <Name>UnityAopSpike.Web</Name>
