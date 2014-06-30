@@ -50,9 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IProductService.cs" />
+    <Compile Include="Products\IProductService.cs" />
     <Compile Include="Ordering\CreateOrderService.cs" />
-    <Compile Include="ProductService.cs" />
+    <Compile Include="Products\ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

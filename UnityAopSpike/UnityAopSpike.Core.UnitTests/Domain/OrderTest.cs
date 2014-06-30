@@ -2,8 +2,8 @@
 
 namespace UnityAopSpike.Core.UnitTests.Domain
 {
-    [TestClass]
-    public class OrderTest
-    {
-    }
+//    [TestClass]
+//    public class OrderTest
+//    {
+//    }
 }

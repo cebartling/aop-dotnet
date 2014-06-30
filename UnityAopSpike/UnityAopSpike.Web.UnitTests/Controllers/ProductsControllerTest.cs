@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using UnityAopSpike.Core.Domain;
 using UnityAopSpike.Services;
+using UnityAopSpike.Services.Products;
 using UnityAopSpike.Web.Controllers;
 
 namespace UnityAopSpike.Web.UnitTests.Controllers

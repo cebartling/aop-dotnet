@@ -3,8 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using UnityAopSpike.Core.Domain;
 using UnityAopSpike.DataAccess.Contexts;
+using UnityAopSpike.Services.Products;
 
-namespace UnityAopSpike.Services.UnitTests
+namespace UnityAopSpike.Services.UnitTests.Products
 {
     [TestClass]
     public class ProductServiceTest

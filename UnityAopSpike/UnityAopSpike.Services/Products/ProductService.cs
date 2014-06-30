@@ -2,7 +2,7 @@
 using UnityAopSpike.Core.Domain;
 using UnityAopSpike.DataAccess.Contexts;
 
-namespace UnityAopSpike.Services
+namespace UnityAopSpike.Services.Products
 {
     public class ProductService : IProductService
     {
