@@ -16,8 +16,8 @@ namespace UnityAopSpike.AcceptanceTests.Steps.WebApi
     public class ProductsApiStepDefs
     {
         private IList<Product> _products;
-        private HttpStatusCode _statusCode;
         private string _responseContent;
+        private HttpStatusCode _statusCode;
 
 
         [Given(@"products exist in the system")]
@@ -31,7 +31,7 @@ namespace UnityAopSpike.AcceptanceTests.Steps.WebApi
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:58867");
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseUrl"]);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage response = client.GetAsync("/api/Products").Result;
