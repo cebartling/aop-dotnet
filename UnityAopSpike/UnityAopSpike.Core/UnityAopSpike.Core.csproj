@@ -65,6 +65,7 @@
     <Compile Include="Domain\Order.cs" />
     <Compile Include="Domain\Product.cs" />
     <Compile Include="Interceptors\LoggingInterceptionBehavior.cs" />
+    <Compile Include="Interceptors\TimingInterceptionBehavior.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

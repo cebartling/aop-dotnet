@@ -20,9 +20,11 @@ namespace UnityAopSpike.Web
             // the end of the request.
             container.RegisterType<IEntityDatabaseContext, EntityDatabaseContext>(new HierarchicalLifetimeManager(),
                 CreateInterfaceInterceptor(), 
-                CreateLoggingInterceptor());
+                CreateLoggingInterceptor(),
+                CreateTimingInterceptor());
             container.RegisterType<IProductService, ProductService>(CreateInterfaceInterceptor(), 
-                CreateLoggingInterceptor());
+                CreateLoggingInterceptor(), 
+                CreateTimingInterceptor());
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
@@ -35,6 +37,11 @@ namespace UnityAopSpike.Web
         private static InterceptionBehavior<LoggingInterceptionBehavior> CreateLoggingInterceptor()
         {
             return new InterceptionBehavior<LoggingInterceptionBehavior>();
+        }
+
+        private static InterceptionBehavior<TimingInterceptionBehavior> CreateTimingInterceptor()
+        {
+            return new InterceptionBehavior<TimingInterceptionBehavior>();
         }
     }
 }

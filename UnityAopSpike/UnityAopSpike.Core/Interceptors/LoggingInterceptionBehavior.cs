@@ -42,7 +42,7 @@ namespace UnityAopSpike.Core.Interceptors
             }
             else
             {
-                logger.Info(string.Format("FINISH: {0} returns {1}", input.MethodBase, result.ReturnValue));
+                logger.Info(string.Format("FINISH: {0} ", input.MethodBase));
             }
 
             return result;
