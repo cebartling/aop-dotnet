@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using UnityAopSpike.Core.Domain;
-using UnityAopSpike.Services;
 using UnityAopSpike.Services.Products;
 
 namespace UnityAopSpike.Web.Controllers
