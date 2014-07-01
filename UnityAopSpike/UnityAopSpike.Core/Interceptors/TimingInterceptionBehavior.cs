@@ -16,17 +16,15 @@ namespace UnityAopSpike.Core.Interceptors
         /// <returns>The method invocation result.</returns>
         public IMethodReturn Invoke(IMethodInvocation input, GetNextInterceptionBehaviorDelegate getNext)
         {
-            ILog logger = LogManager.GetLogger(typeof (TimingInterceptionBehavior));
-
+            var logger = LogManager.GetLogger(typeof (TimingInterceptionBehavior));
             var stopwatch = Stopwatch.StartNew();
 
             // Invoke the next behavior in the chain.
             IMethodReturn result = getNext()(input, getNext);
 
             stopwatch.Stop();
-            logger.Info(string.Format("TIMING: {0} ms elapsed during invocation: {1}", 
+            logger.Info(string.Format("TIMING: {0} milliseconds elapsed during method execution: {1}", 
                 stopwatch.ElapsedMilliseconds, input.MethodBase));
-
             return result;
         }
 

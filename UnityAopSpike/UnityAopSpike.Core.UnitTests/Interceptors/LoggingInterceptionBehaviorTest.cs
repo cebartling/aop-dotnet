@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Globalization;
-using System.Reflection;
 using Microsoft.Practices.Unity.InterceptionExtension;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -11,12 +9,12 @@ namespace UnityAopSpike.Core.UnitTests.Interceptors
     [TestClass]
     public class LoggingInterceptionBehaviorTest
     {
+        private Mock<IParameterCollection> _argumentsMock;
+        private Mock<IGetNextInterceptionBehaviorDelegate> _getNextInterceptionBehaviorDelegateMock;
         private LoggingInterceptionBehavior _interceptor;
+        private Mock<IInvokeInterceptionBehaviorDelegate> _invokeInterceptionBehaviorDelegateMock;
         private Mock<IMethodInvocation> _methodInvocationMock;
         private Mock<IMethodReturn> _methodReturnMock;
-        private Mock<IInvokeInterceptionBehaviorDelegate> _invokeInterceptionBehaviorDelegateMock;
-        private Mock<IGetNextInterceptionBehaviorDelegate> _getNextInterceptionBehaviorDelegateMock;
-        private Mock<IParameterCollection> _argumentsMock;
 
         [TestInitialize]
         public void SetUp()
@@ -33,7 +31,7 @@ namespace UnityAopSpike.Core.UnitTests.Interceptors
             _getNextInterceptionBehaviorDelegateMock = new Mock<IGetNextInterceptionBehaviorDelegate>();
             _getNextInterceptionBehaviorDelegateMock.Setup(call => call.GetNextInterceptionBehaviorDelegate()).
                 Returns(_invokeInterceptionBehaviorDelegateMock.Object.InvokeInterceptionBehaviorDelegate);
-            
+
             // Method invocation collaborations
             _methodInvocationMock.SetupGet(x => x.Target).Returns(new object());
             _methodInvocationMock.SetupGet(x => x.MethodBase).Returns(new MyMethodBase());
@@ -50,7 +48,8 @@ namespace UnityAopSpike.Core.UnitTests.Interceptors
             IMethodReturn methodReturn = _interceptor.Invoke(_methodInvocationMock.Object,
                 _getNextInterceptionBehaviorDelegateMock.Object.GetNextInterceptionBehaviorDelegate);
 
-            _getNextInterceptionBehaviorDelegateMock.Verify(call => call.GetNextInterceptionBehaviorDelegate(), Times.Once());
+            _getNextInterceptionBehaviorDelegateMock.Verify(call => call.GetNextInterceptionBehaviorDelegate(),
+                Times.Once());
         }
 
         [TestMethod]
@@ -102,88 +101,17 @@ namespace UnityAopSpike.Core.UnitTests.Interceptors
             _methodReturnMock.VerifyGet(x => x.Exception);
             _methodInvocationMock.VerifyGet(x => x.MethodBase, Times.Exactly(2));
         }
-    }
 
-    public interface IGetNextInterceptionBehaviorDelegate
-    {
-        InvokeInterceptionBehaviorDelegate GetNextInterceptionBehaviorDelegate();
-    }
-
-    public interface IInvokeInterceptionBehaviorDelegate
-    {
-        IMethodReturn InvokeInterceptionBehaviorDelegate(IMethodInvocation input,
-            GetNextInterceptionBehaviorDelegate getNext);
-    }
-
-    public class MyMethodBase : MethodBase
-    {
-        public override object[] GetCustomAttributes(bool inherit)
+        [TestMethod]
+        public void WillExecute_ReturnsTrue()
         {
-            throw new NotImplementedException();
+            Assert.IsTrue(_interceptor.WillExecute);
         }
 
-        public override bool IsDefined(Type attributeType, bool inherit)
+        [TestMethod]
+        public void GetRequiredInterfaces_ReturnsEmptyEnumerator()
         {
-            throw new NotImplementedException();
-        }
-
-        public override ParameterInfo[] GetParameters()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override MethodImplAttributes GetMethodImplementationFlags()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override object Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override MemberTypes MemberType
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override string Name
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override Type DeclaringType
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override Type ReflectedType
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override RuntimeMethodHandle MethodHandle
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override MethodAttributes Attributes
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override object[] GetCustomAttributes(Type attributeType, bool inherit)
-        {
-            throw new NotImplementedException();
+            Assert.AreEqual(Type.EmptyTypes, _interceptor.GetRequiredInterfaces());
         }
     }
-
-    public class MyParameterInfo : ParameterInfo
-    {
-        public override string ToString()
-        {
-            return "something";
-        }
-    }
-
 }

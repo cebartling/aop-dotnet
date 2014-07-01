@@ -72,7 +72,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Domain\OrderTest.cs" />
+    <Compile Include="Interceptors\IGetNextInterceptionBehaviorDelegate.cs" />
+    <Compile Include="Interceptors\IInvokeInterceptionBehaviorDelegate.cs" />
     <Compile Include="Interceptors\LoggingInterceptionBehaviorTest.cs" />
+    <Compile Include="Interceptors\MyMethodBase.cs" />
+    <Compile Include="Interceptors\MyParameterInfo.cs" />
+    <Compile Include="Interceptors\TimingInterceptionBehaviorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
