@@ -33,10 +33,9 @@ namespace UnityAopSpike.Web
                 "~/Scripts/angular-ui/ui-bootstrap.js",
                 "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
 
-//            bundles.Add(new ScriptBundle("~/bundles/app").Include(
-//                "~/Scripts/app/controllers/products-controller.js",
-//                "~/Scripts/app/app.js"
-//                ));
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/Scripts/app/app.js",
+                "~/Scripts/app/controllers/products-controller.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",

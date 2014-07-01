@@ -18,7 +18,7 @@
 
         $routeProvider.otherwise({ redirectTo: '/' });
 
-        return $locationProvider.html5Mode(true);
+        return $locationProvider.html5Mode(false);
     });
 
 }).call(this);
