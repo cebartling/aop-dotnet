@@ -20,18 +20,23 @@ namespace UnityAopSpike.Web
                 "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
-                "~/Scripts/angular.min.js",
-                "~/Scripts/angular-loader.min.js",
-                "~/Scripts/angular-animate.min.js",
-                "~/Scripts/angular-cookies.min.js",
-                "~/Scripts/angular-resource.min.js",
-                "~/Scripts/angular-route.min.js",
-                "~/Scripts/angular-sanitize.min.js",
-                "~/Scripts/angular-touch.min.js"));
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-loader.js",
+                "~/Scripts/angular-animate.js",
+                "~/Scripts/angular-cookies.js",
+                "~/Scripts/angular-resource.js",
+                "~/Scripts/angular-route.js",
+                "~/Scripts/angular-sanitize.js",
+                "~/Scripts/angular-touch.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularjs-ui").Include(
-                "~/Scripts/angular-ui/ui-bootstrap.min.js",
-                "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"));
+                "~/Scripts/angular-ui/ui-bootstrap.js",
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
+
+//            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+//                "~/Scripts/app/controllers/products-controller.js",
+//                "~/Scripts/app/app.js"
+//                ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
@@ -39,7 +44,7 @@ namespace UnityAopSpike.Web
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }
