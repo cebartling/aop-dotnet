@@ -19,6 +19,20 @@ namespace UnityAopSpike.Web
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
+                "~/Scripts/angular.min.js",
+                "~/Scripts/angular-loader.min.js",
+                "~/Scripts/angular-animate.min.js",
+                "~/Scripts/angular-cookies.min.js",
+                "~/Scripts/angular-resource.min.js",
+                "~/Scripts/angular-route.min.js",
+                "~/Scripts/angular-sanitize.min.js",
+                "~/Scripts/angular-touch.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularjs-ui").Include(
+                "~/Scripts/angular-ui/ui-bootstrap.min.js",
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
