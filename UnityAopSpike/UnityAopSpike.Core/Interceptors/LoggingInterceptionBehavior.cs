@@ -23,15 +23,17 @@ namespace UnityAopSpike.Core.Interceptors
             var logger = LogManager.GetLogger(input.Target.GetType());
 
             logger.Info(string.Format("START: {0}", input.MethodBase));
-
-            for (int i = 0; i < input.Arguments.Count; i++)
+            var arguments = input.Arguments;
+            for (int i = 0; i < arguments.Count; i++)
             {
-                logger.Info(string.Format("  ARGUMENT: Name: {0}, Info: {1}", input.Arguments.ParameterName(i), 
-                    input.Arguments.GetParameterInfo(i)));
+                var parameterName = arguments.ParameterName(i);
+                var parameterInfo = arguments.GetParameterInfo(i);
+                logger.Info(string.Format("  ARGUMENT: Name: {0}, Info: {1}", parameterName, parameterInfo));
             }
 
             // Invoke the next behavior in the chain.
-            IMethodReturn result = getNext()(input, getNext);
+            var invokeInterceptionBehaviorDelegate = getNext();
+            IMethodReturn result = invokeInterceptionBehaviorDelegate(input, getNext);
 
             // After invoking the method on the original target.
             if (result.Exception != null)
